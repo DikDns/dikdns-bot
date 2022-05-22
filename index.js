@@ -7,7 +7,11 @@ const { Client, Intents, Collection } = require("discord.js");
 
 const rest = new REST({ version: "9" }).setToken(process.env.TOKEN);
 const client = new Client({
-  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
+  intents: [
+    Intents.FLAGS.GUILDS,
+    Intents.FLAGS.GUILD_MESSAGES,
+    Intents.FLAGS.GUILD_MEMBERS,
+  ],
 });
 client.commands = new Collection();
 
