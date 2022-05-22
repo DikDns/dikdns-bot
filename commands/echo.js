@@ -13,7 +13,7 @@ module.exports = {
   async execute(interaction) {
     interaction.reply({
       content: interaction.options.getString("message"),
-      ephemeral: true,
+      ephemeral: false,
     });
   },
 };
